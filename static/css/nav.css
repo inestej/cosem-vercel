@@ -1,0 +1,105 @@
+.navbar-nav {
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    margin-left: 20px;
+    display: flex;
+}
+
+.nav-item {
+    padding: 0 20px; /* Adjust the padding as needed */
+}
+
+.ms-auto {
+    margin-left: auto !important; /* Aligns to the right */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    margin-left: 9%;
+}
+
+.navbar-brand img {
+    margin-right: 10%;
+    display: flex;
+}
+
+.navbar-buttons {
+    display: flex;
+    align-items: center;
+    margin-right: 150px; /* Adjust this value to add space between buttons and the right edge */
+}
+
+.navbar-buttons .btn {
+    margin-left: 20px; /* Adjust this value to add space between the buttons */
+}
+
+/* Navbar transition background */
+.navbar-scroll {
+    background: linear-gradient(135deg, #149e2b 0%, #80ff80 100%) !important;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.navbar {
+    transition: background-color 0.5s ease-in-out;
+}
+
+/* Services button styles */
+.services-button {
+    width: 9em;
+    height: 3em;
+    align-items: center;
+    border-radius: 30em;
+    font-size: 15px;
+    font-family: inherit;
+    border: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    background-color: transparent;
+}
+
+.services-button::before {
+    content: '';
+    width: 0;
+    height: 3em;
+    border-radius: 30em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+
+.services-button:hover::before, .dropdown:hover .services-button::before {
+    width: 9em;
+}
+/* Hide the dropdown indicator arrow */
+.no-arrow::after {
+    display: none !important;
+}
+
+
+/* Dropdown styles */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Add this line to make edges round */
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: transparent;
+}
+
+.dropdown>.dropdown-toggle:active {
+    pointer-events: none;
+}
